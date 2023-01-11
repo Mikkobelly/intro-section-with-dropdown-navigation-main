@@ -1,0 +1,43 @@
+//VARIABLES
+
+$color-white: hsl(0, 0%, 98%);
+$color-grey-medium: hsl(0, 0%, 41%);
+$color-black: hsl(0, 0%, 8%);
+
+$box-shadow-big: 0 1rem 2rem rgba(20, 20, 20, .3);
+$box-shadow-small: 0 .5rem 1rem rgba($color-black, .3);
+
+$bp-medium: 59.36em;
+$bp-small: 37.5em;
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    // @media only screen and (max-width: $bp-medium) {
+    //     font-size: 50%;
+    // }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 50%;
+    }
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.8rem;
+    font-family: 'Epilogue', sans-serif;
+    color: $color-grey-medium;
+    background-color: $color-white;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}

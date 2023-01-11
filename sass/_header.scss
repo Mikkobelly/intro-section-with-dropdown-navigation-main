@@ -1,0 +1,155 @@
+.nav {
+    margin: 3rem 4rem;
+    display: flex;
+    align-items: center;
+
+
+    &__icon-box {
+        height: 5rem;
+    }
+
+    &__icon {
+        height: 100%;
+        margin-right: 3rem;
+    }
+
+    &__list {
+        list-style: none;
+        margin-right: auto;
+
+        @media only screen and (max-width: $bp-medium) {
+            visibility: hidden;
+            height: 3px;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        margin-left: 2.5rem;
+        padding: 2.5rem 0;
+    }
+
+    &__item:hover {
+        cursor: pointer;
+    }
+
+    &__item--features,
+    &__item--company {
+        position: relative;
+    }
+
+    &__item--features:hover>.dropdown,
+    &__item--company:hover>.dropdown {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__item--features:hover>.dropdown {
+        height: 21rem;
+    }
+
+    &__item--company:hover>.dropdown {
+        height: 15.25rem;
+    }
+
+    &__item--features:hover>.dropdown>.dropdown__list,
+    &__item--company:hover>.dropdown>.dropdown__list {
+        visibility: visible;
+    }
+
+    &__item--features:hover>&__arrow-down,
+    &__item--company:hover>&__arrow-down {
+        display: none;
+    }
+
+    &__item--features:hover>&__arrow-up,
+    &__item--company:hover>&__arrow-up {
+        display: inline-block;
+    }
+
+    &__link {
+        transition: all .2s;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__link:hover {
+        color: $color-black;
+    }
+
+    &__dropdown-box {
+        display: inline-block;
+        padding: 3px;
+    }
+
+    &__dropdown {
+        height: 100%;
+    }
+
+    &__dropdown:hover {
+        cursor: pointer;
+    }
+
+    &__arrow-up {
+        display: none;
+    }
+
+    &__btn {
+        background-color: inherit;
+        color: inherit;
+        width: 10rem;
+        cursor: pointer;
+        transition: all .2s;
+        box-shadow: none;
+
+        @media only screen and (max-width: $bp-medium) {
+            visibility: hidden;
+        }
+
+        &:hover {
+            box-shadow: $box-shadow-big;
+            transform: translateY(-3px);
+        }
+
+        &:active,
+        &:focus {
+            transform: translateY(-1px);
+            box-shadow: $box-shadow-small;
+        }
+
+        &--login {
+            border: none;
+            margin-right: 1rem;
+        }
+
+        &--register {
+            border: solid 1px $color-grey-medium;
+        }
+    }
+
+    &__menu-box {
+        width: 6rem;
+        display: none;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: block;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 10rem;
+        }
+    }
+
+    &__menu {
+        width: 100%;
+    }
+}
+
+.show-dropdown {
+    visibility: visible;
+    opacity: 1;
+}
